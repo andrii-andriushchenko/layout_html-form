@@ -1,1 +1,18 @@
-/* styles go here */
+.element {
+  display: block;
+  margin: 10px 0;
+}
+
+.element__end {
+  margin-top: 10px;
+  display: block;
+}
+
+.radio__answear {
+  display: inline-block;
+}
+
+.group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

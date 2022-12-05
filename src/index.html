@@ -2,16 +2,187 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta
-      name="viewport"
+    <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./main.js"></script>
   </head>
   <body>
-    <h1>HTML Form</h1>
-    <script type="text/javascript" src="./main.js"></script>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+      <fieldset class="first__group personal__information">
+        <legend>Personal information</legend>
+
+        <label>
+          Surname:
+          <input
+            type="text"
+            name="surname"
+            autocomplete="off"
+            required
+          >
+        </label>
+
+        <label class="element">
+          Name:
+          <input
+            type="text"
+            name="name"
+            autocomplete="off"
+            required
+          >
+        </label>
+
+        <label class="element">
+          How old are You?
+          <input type="number"
+            name="age"
+            value="12"
+            min="1"
+            max="100"
+            class = "field"
+          >
+        </label>
+
+        <label class="element">
+          Full date of birth:
+          <input
+            type="date"
+            name="date"
+            class = "field"
+          >
+        </label>
+
+        <label>
+          I accept the term of the agreement
+          <input
+            type="checkbox"
+            name="term"
+            class = "last__field"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="group registration">
+        <legend>Registration</legend>
+
+        <label>
+          E-mail:
+          <input
+            type="email"
+            name="email"
+            placeholder="email@example.com"
+            class = "first__field"
+            required
+          >
+        </label>
+
+        <label class="element__end">
+          Password:
+          <input
+            type="password"
+            name="password"
+            minlength="8"
+            maxlength="20"
+            class = "last__field"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="group facts">
+        <legend>
+          An interesting fact about you!
+        </legend>
+
+        <label>
+          Do you love cats?
+          <label class="radio__answear">
+            <input
+              type="radio"
+              name="answear"
+              value="y"
+              class = "first__field"
+            > Yes
+          </label>
+
+          <label class="radio__answear">
+            <input
+              type="radio"
+              name="answear"
+              value="n"
+              class = "field"
+            > No
+          </label>
+        </label>
+
+        <label class="element">
+          What is your favorite color?
+          <input
+            type="color"
+            name="color"
+            class = "field"
+          >
+        </label>
+
+        <label class="element">
+          What time do you go to bed?
+          <input
+            type="time"
+            name="time"
+            step="2"
+            class = "field"
+          >
+        </label>
+
+        <label class="element">
+          What are your favorite brand of cars?
+          <select name="brands" multiple>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </label>
+
+        <label>
+          How do you rate our work?
+          <input
+            type="range"
+            name="rate"
+            min="0"
+            max="10"
+            value="0"
+            class = "last__field"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="group additional">
+        <legend>Additional info:</legend>
+
+        <label>
+          Comments:
+          <textarea
+            name="comments"
+            cols="20"
+            rows="2"
+            class="first__field"
+         ></textarea>
+        </label>
+
+        <label class="element__end">
+          Would you recommend us?
+          <select name="recommend__us" class="last__field">
+            <option value="yes" selected>yes</option>
+            <option value="no">no</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
